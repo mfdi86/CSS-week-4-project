@@ -1,0 +1,35 @@
+
+.flex-nav {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 190px;
+  margin: -10px;
+  padding: 10px;
+  justify-content: center;
+  background-color: #000000;
+  border-bottom: 2px solid #aaff00;
+
+    ul  {
+    padding-right: 10px;
+    font-family: 'Raleway Dots', cursive;
+    font-size: 25px;
+    align-self: flex-end;
+    color: #fff;
+
+      li {
+        display: inline-block;
+
+      }
+  }
+}
+
+#header-title {
+  font-family: 'Megrim', cursive;
+  font-size: 80px;
+  height: 90px;
+  color: #fff;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+  
+}
