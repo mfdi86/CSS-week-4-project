@@ -57,3 +57,14 @@
     transform:  translateY(40px)translateX(60px);
   }
 }
+
+@keyframes right-text {
+  0%  {
+    transform: rotate3d(-2,1, 0,-360deg);
+    opacity: 0;
+  }
+  100% {
+    transform:  translateY(-10px)translateX(130px);
+    opacity: 1;
+  }
+}
