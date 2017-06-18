@@ -1,66 +1,84 @@
-
+//STYLES FOR TOP OF CUBE ---------------
 
 .top  {
   position: relative;
 
-
   a  {
     display: none;
     position: absolute;
-    left: 63px;
-    top: 43px;
+    left: 52px;
+    top: 145px;
     z-index: 1;
   }
 }
 
-.top:hover  {
-  animation-name: top;
-  animation-duration: 1.8s;
-  animation-timing-function: ease-in;
-  animation-fill-mode: forwards;
-    // name: top;
-    // duration: 1.3s;
-    // transition-timing-function: ease-in-out;
-    // fill-mode: forwards;
+
+//ANIMATIONS FOR TOP OF CUBE ----------------
+
+.top-trigger  {
+  position: relative;
+  top: -110px;
+  width: 200px;
+  height: 170px;
 }
 
-.top:hover a {
+.top-trigger:hover  {
+  animation-name: top;
+  animation-duration: 1.9s;
+  animation-fill-mode: forwards;
+}
 
+.top-trigger:hover a {
   display: block;
+  font-family: 'Raleway Dots', cursive;
+  color: white;
+  text-decoration: none;
   animation-name: top-text;
   animation-duration: 2.2s;
   animation-timing-function: ease-in;
   animation-fill-mode: forwards;
-
 }
 
-
+//STYLES FOR RIGHT SIDE OF CUBE ----------------
 .right  {
+  position: relative;
+  right: 100px;
+  top: -76px;
+  a  {
+    display: none;
+    position: absolute;
+    left: 52px;
+    top: 145px;
+    z-index: 1;
+  }
 }
+
+//ANIMATIONS FOR RIGHT SIDE OF CUBE ----------------
+
+.right-trigger  {
+  position: relative;
+  top: -95px;
+  left: 100px;
+  width: 200px;
+  height: 160px;
+}
+
+.right-trigger:hover > .right {
+  animation-name: right;
+  animation-duration: 1.9s;
+  animation-fill-mode: forwards;
+}
+
+
+
+
 .left   {
 }
 
 
 
-@keyframes top {
-  0%  {
-    transform: rotateX(0deg) translateY(-20px);
-  }
-  100% {
-    transform: rotateX(360deg) translateY(-40px);
-  }
-}
 
-@keyframes top-text {
-  0%  {
-    transform: translateY(0px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(-90px);
-    opacity: 1;
-  }
-}
+//STYLES FOR CUBE ---------------------------------
 
 .flex-cube  {
   display: flex;
@@ -82,6 +100,7 @@
 	border-right: 100px solid #dcb4d4;
 	border-bottom: 50px solid transparent;
   position: absolute;
+  top: 110px;
   animation: one 1.4s ease-in-out 0.6s infinite;
 }
 
@@ -103,7 +122,7 @@
 	border-left: 100px solid #ffa3ed;
 	border-bottom: 50px solid transparent;
   position: absolute;
-  top: 0px;
+  top: 110px;
   left: 100px;
   animation: two 1.4s ease-in-out 0.1s infinite;
 }

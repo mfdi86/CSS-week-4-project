@@ -50,6 +50,23 @@ body {
   100% {
     opacity: 1;
     transform: scale(1); } }
+@keyframes top {
+  0% {
+    transform: rotateX(0deg) translateY(-20px); }
+  100% {
+    transform: rotateX(360deg) translateY(-40px); } }
+@keyframes top-text {
+  0% {
+    transform: translateY(0px);
+    opacity: 0; }
+  100% {
+    transform: translateY(-105px);
+    opacity: 1; } }
+@keyframes right {
+  0% {
+    transform: rotate3d(-2, 1, 0, -360deg); }
+  100% {
+    transform: translateY(40px) translateX(60px); } }
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -421,35 +438,54 @@ textarea {
   .top a {
     display: none;
     position: absolute;
-    left: 63px;
-    top: 43px;
+    left: 52px;
+    top: 145px;
     z-index: 1; }
 
-.top:hover {
+.top-trigger {
+  position: relative;
+  top: -110px;
+  width: 200px;
+  height: 170px; }
+
+.top-trigger:hover {
   animation-name: top;
-  animation-duration: 1.8s;
-  animation-timing-function: ease-in;
+  animation-duration: 1.9s;
   animation-fill-mode: forwards; }
 
-.top:hover a {
+.top-trigger:hover a {
   display: block;
+  font-family: 'Raleway Dots', cursive;
+  color: white;
+  text-decoration: none;
   animation-name: top-text;
   animation-duration: 2.2s;
   animation-timing-function: ease-in;
   animation-fill-mode: forwards; }
 
-@keyframes top {
-  0% {
-    transform: rotateX(0deg) translateY(-20px); }
-  100% {
-    transform: rotateX(360deg) translateY(-40px); } }
-@keyframes top-text {
-  0% {
-    transform: translateY(0px);
-    opacity: 0; }
-  100% {
-    transform: translateY(-90px);
-    opacity: 1; } }
+.right {
+  position: relative;
+  right: 100px;
+  top: -76px; }
+  .right a {
+    display: none;
+    position: absolute;
+    left: 52px;
+    top: 145px;
+    z-index: 1; }
+
+.right-trigger {
+  position: relative;
+  top: -95px;
+  left: 100px;
+  width: 200px;
+  height: 160px; }
+
+.right-trigger:hover > .right {
+  animation-name: right;
+  animation-duration: 1.9s;
+  animation-fill-mode: forwards; }
+
 .flex-cube {
   display: flex;
   justify-content: center; }
@@ -468,6 +504,7 @@ textarea {
   border-right: 100px solid #dcb4d4;
   border-bottom: 50px solid transparent;
   position: absolute;
+  top: 110px;
   animation: one 1.4s ease-in-out 0.6s infinite; }
 
 @keyframes one {
@@ -483,7 +520,7 @@ textarea {
   border-left: 100px solid #ffa3ed;
   border-bottom: 50px solid transparent;
   position: absolute;
-  top: 0px;
+  top: 110px;
   left: 100px;
   animation: two 1.4s ease-in-out 0.1s infinite; }
 

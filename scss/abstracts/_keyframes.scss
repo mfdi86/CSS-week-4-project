@@ -1,4 +1,4 @@
-// HEADER KEYFRAME-----------------------------
+// HEADER ANIMATION-----------------------------
 @keyframes header-scale   {
   0%  {
     opacity: 0;
@@ -10,7 +10,7 @@
   }
 }
 
-// CUBE KEYFRAME-------------------------------
+// CUBE SCALE ANIMATION-------------------------------
 
 @keyframes cube-scale   {
   0%  {
@@ -20,5 +20,40 @@
   100%  {
     opacity: 1;
     transform: scale(1);
+  }
+}
+
+//TOP OF CUBE OPENING ANIMATION--------------------
+
+@keyframes top {
+  0%  {
+    transform: rotateX(0deg) translateY(-20px);
+  }
+  100% {
+    transform: rotateX(360deg) translateY(-40px);
+  }
+}
+
+//VISUAL ART TEXT ANIMATION --------------------------
+
+@keyframes top-text {
+  0%  {
+    transform: translateY(0px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-105px);
+    opacity: 1;
+  }
+}
+
+//RIGHT SIDE OF CUBE OPENING ANIMATION--------------------
+
+@keyframes right {
+  0%  {
+    transform: rotate3d(-2,1, 0,-360deg);
+  }
+  100% {
+    transform:  translateY(40px)translateX(60px);
   }
 }
