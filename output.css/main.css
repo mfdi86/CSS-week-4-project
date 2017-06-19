@@ -1,613 +1,68 @@
-body {
-  background-color: #000000; }
+/*
+Error: Invalid CSS after "    }": expected selector or at-rule, was "}"
+        on line 57 of scss/pages/_art-gallery.scss
+        from line 9 of scss/main.scss
 
-.flex-nav {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  padding-left: 30px;
-  justify-content: center;
-  width: 100%;
-  height: 300px;
-  background-color: #000000;
-  border-bottom: 2px solid #ebfcb4; }
-  .flex-nav h1 {
-    position: absolute;
-    font-family: 'Raleway Dots', cursive;
-    font-size: 70px;
-    color: white;
-    animation: header-scale 2.5s ease-in-out; }
-  .flex-nav h4 {
-    position: absolute;
-    font-family: 'Raleway Dots', cursive;
-    font-size: 25px;
-    color: white;
-    animation: header-scale 4.5s ease-in-out;
-    bottom: 5px; }
-  .flex-nav ul {
-    position: absolute;
-    align-self: flex-end;
-    padding-right: 60px;
-    font-family: 'Raleway Dots', cursive;
-    font-size: 25px;
-    color: white;
-    bottom: 13px; }
-    .flex-nav ul li {
-      display: inline-block;
-      animation: header-scale 4.5s ease-in-out; }
+52: 
+53:   .img3  {
+54:     background-image: url('../img/XIXC.jpg');
+55:     @extend .small-images;
+56:     }
+57:   }
+58: 
+59:   .img4  {
+60:     background-image: url('../img/XOO.jpg');
+61:     @extend .small-images;
+62:     }
 
-@keyframes header-scale {
-  0% {
-    opacity: 0;
-    transform: scale(0.05); }
-  100% {
-    opacity: 1;
-    transform: scale(1); } }
-@keyframes cube-scale {
-  0% {
-    opacity: 0;
-    transform: scale(0.005); }
-  100% {
-    opacity: 1;
-    transform: scale(1); } }
-@keyframes top {
-  0% {
-    transform: rotateX(0deg) translateY(-20px); }
-  100% {
-    transform: rotateX(360deg) translateY(-40px); } }
-@keyframes top-text {
-  0% {
-    transform: translateY(0px);
-    opacity: 0; }
-  100% {
-    transform: translateY(-105px);
-    opacity: 1; } }
-@keyframes right {
-  0% {
-    transform: rotate3d(-2, 1, 0, -360deg); }
-  100% {
-    transform: translateY(40px) translateX(60px); } }
-@keyframes right-text {
-  0% {
-    transform: rotate3d(-2, 1, 0, -360deg);
-    opacity: 0; }
-  100% {
-    transform: translateY(-10px) translateX(130px);
-    opacity: 1; } }
-/*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
-/**
- * 1. Change the default font family in all browsers (opinionated).
- * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
- */
-html {
-  font-family: sans-serif;
-  /* 1 */
-  -ms-text-size-adjust: 100%;
-  /* 2 */
-  -webkit-text-size-adjust: 100%;
-  /* 2 */ }
-
-/**
- * Remove the margin in all browsers (opinionated).
- */
-body {
-  margin: 0; }
-
-/* HTML5 display definitions
-   ========================================================================== */
-/**
- * Add the correct display in IE 9-.
- * 1. Add the correct display in Edge, IE, and Firefox.
- * 2. Add the correct display in IE.
- */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-main,
-menu,
-nav,
-section,
-summary {
-  /* 1 */
-  display: block; }
-
-/**
- * Add the correct display in IE 9-.
- */
-audio,
-canvas,
-progress,
-video {
-  display: inline-block; }
-
-/**
- * Add the correct display in iOS 4-7.
- */
-audio:not([controls]) {
-  display: none;
-  height: 0; }
-
-/**
- * Add the correct vertical alignment in Chrome, Firefox, and Opera.
- */
-progress {
-  vertical-align: baseline; }
-
-/**
- * Add the correct display in IE 10-.
- * 1. Add the correct display in IE.
- */
-template,
-[hidden] {
-  display: none; }
-
-/* Links
-   ========================================================================== */
-/**
- * 1. Remove the gray background on active links in IE 10.
- * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
- */
-a {
-  background-color: transparent;
-  /* 1 */
-  -webkit-text-decoration-skip: objects;
-  /* 2 */ }
-
-/**
- * Remove the outline on focused links when they are also active or hovered
- * in all browsers (opinionated).
- */
-a:active,
-a:hover {
-  outline-width: 0; }
-
-/* Text-level semantics
-   ========================================================================== */
-/**
- * 1. Remove the bottom border in Firefox 39-.
- * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
- */
-abbr[title] {
-  border-bottom: none;
-  /* 1 */
-  text-decoration: underline;
-  /* 2 */
-  text-decoration: underline dotted;
-  /* 2 */ }
-
-/**
- * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
- */
-b,
-strong {
-  font-weight: inherit; }
-
-/**
- * Add the correct font weight in Chrome, Edge, and Safari.
- */
-b,
-strong {
-  font-weight: bolder; }
-
-/**
- * Add the correct font style in Android 4.3-.
- */
-dfn {
-  font-style: italic; }
-
-/**
- * Correct the font size and margin on `h1` elements within `section` and
- * `article` contexts in Chrome, Firefox, and Safari.
- */
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0; }
-
-/**
- * Add the correct background and color in IE 9-.
- */
-mark {
-  background-color: #ff0;
-  color: #000; }
-
-/**
- * Add the correct font size in all browsers.
- */
-small {
-  font-size: 80%; }
-
-/**
- * Prevent `sub` and `sup` elements from affecting the line height in
- * all browsers.
- */
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline; }
-
-sub {
-  bottom: -0.25em; }
-
-sup {
-  top: -0.5em; }
-
-/* Embedded content
-   ========================================================================== */
-/**
- * Remove the border on images inside links in IE 10-.
- */
-img {
-  border-style: none; }
-
-/**
- * Hide the overflow in IE.
- */
-svg:not(:root) {
-  overflow: hidden; }
-
-/* Grouping content
-   ========================================================================== */
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace, monospace;
-  /* 1 */
-  font-size: 1em;
-  /* 2 */ }
-
-/**
- * Add the correct margin in IE 8.
- */
-figure {
-  margin: 1em 40px; }
-
-/**
- * 1. Add the correct box sizing in Firefox.
- * 2. Show the overflow in Edge and IE.
- */
-hr {
-  box-sizing: content-box;
-  /* 1 */
-  height: 0;
-  /* 1 */
-  overflow: visible;
-  /* 2 */ }
-
-/* Forms
-   ========================================================================== */
-/**
- * 1. Change font properties to `inherit` in all browsers (opinionated).
- * 2. Remove the margin in Firefox and Safari.
- */
-button,
-input,
-select,
-textarea {
-  font: inherit;
-  /* 1 */
-  margin: 0;
-  /* 2 */ }
-
-/**
- * Restore the font weight unset by the previous rule.
- */
-optgroup {
-  font-weight: bold; }
-
-/**
- * Show the overflow in IE.
- * 1. Show the overflow in Edge.
- */
-button,
-input {
-  /* 1 */
-  overflow: visible; }
-
-/**
- * Remove the inheritance of text transform in Edge, Firefox, and IE.
- * 1. Remove the inheritance of text transform in Firefox.
- */
-button,
-select {
-  /* 1 */
-  text-transform: none; }
-
-/**
- * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
- *    controls in Android 4.
- * 2. Correct the inability to style clickable types in iOS and Safari.
- */
-button,
-html [type="button"],
-[type="reset"],
-[type="submit"] {
-  -webkit-appearance: button;
-  /* 2 */ }
-
-/**
- * Remove the inner border and padding in Firefox.
- */
-button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
-  border-style: none;
-  padding: 0; }
-
-/**
- * Restore the focus styles unset by the previous rule.
- */
-button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
-  outline: 1px dotted ButtonText; }
-
-/**
- * Change the border, margin, and padding in all browsers (opinionated).
- */
-fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em; }
-
-/**
- * 1. Correct the text wrapping in Edge and IE.
- * 2. Correct the color inheritance from `fieldset` elements in IE.
- * 3. Remove the padding so developers are not caught out when they zero out
- *    `fieldset` elements in all browsers.
- */
-legend {
-  box-sizing: border-box;
-  /* 1 */
-  color: inherit;
-  /* 2 */
-  display: table;
-  /* 1 */
-  max-width: 100%;
-  /* 1 */
-  padding: 0;
-  /* 3 */
-  white-space: normal;
-  /* 1 */ }
-
-/**
- * Remove the default vertical scrollbar in IE.
- */
-textarea {
-  overflow: auto; }
-
-/**
- * 1. Add the correct box sizing in IE 10-.
- * 2. Remove the padding in IE 10-.
- */
-[type="checkbox"],
-[type="radio"] {
-  box-sizing: border-box;
-  /* 1 */
-  padding: 0;
-  /* 2 */ }
-
-/**
- * Correct the cursor style of increment and decrement buttons in Chrome.
- */
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
-  height: auto; }
-
-/**
- * 1. Correct the odd appearance in Chrome and Safari.
- * 2. Correct the outline style in Safari.
- */
-[type="search"] {
-  -webkit-appearance: textfield;
-  /* 1 */
-  outline-offset: -2px;
-  /* 2 */ }
-
-/**
- * Remove the inner padding and cancel buttons in Chrome and Safari on OS X.
- */
-[type="search"]::-webkit-search-cancel-button,
-[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none; }
-
-/**
- * Correct the text style of placeholders in Chrome, Edge, and Safari.
- */
-::-webkit-input-placeholder {
-  color: inherit;
-  opacity: 0.54; }
-
-/**
- * 1. Correct the inability to style clickable types in iOS and Safari.
- * 2. Change font properties to `inherit` in Safari.
- */
-::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  /* 1 */
-  font: inherit;
-  /* 2 */ }
-
-.top {
-  position: relative; }
-  .top a {
-    display: none;
-    position: absolute;
-    left: 52px;
-    top: 145px;
-    z-index: 1; }
-
-.top-trigger {
-  position: relative;
-  top: -110px;
-  width: 200px;
-  height: 170px; }
-
-.top-trigger:hover {
-  animation-name: top;
-  animation-duration: 1.9s;
-  animation-fill-mode: forwards; }
-
-.top-trigger:hover a {
-  display: block;
-  font-family: 'Raleway Dots', cursive;
-  color: white;
-  text-decoration: none;
-  animation-name: top-text;
-  animation-duration: 2.2s;
-  animation-timing-function: ease-in;
-  animation-fill-mode: forwards; }
-
-.right {
-  position: relative;
-  right: 100px;
-  top: -76px; }
-  .right a {
-    display: none;
-    position: absolute;
-    left: 90px;
-    top: 145px;
-    z-index: 1; }
-
-.right-trigger {
-  position: relative;
-  top: -95px;
-  left: 100px;
-  width: 200px;
-  height: 160px; }
-
-.right-trigger:hover > .right {
-  animation-name: right;
-  animation-duration: 1.9s;
-  animation-fill-mode: forwards; }
-
-.right-trigger:hover a {
-  display: block;
-  font-family: 'Raleway Dots', cursive;
-  color: white;
-  text-decoration: none;
-  animation-name: right-text;
-  animation-duration: 2.2s;
-  animation-timing-function: ease-in;
-  animation-fill-mode: forwards; }
-
-.flex-cube {
-  display: flex;
-  justify-content: center; }
-
-.container {
-  height: 400px;
-  width: 400px;
-  position: relative;
-  display: inline-block;
-  top: 180px; }
-
-.one {
-  width: 0;
-  height: 0;
-  border-top: 50px solid transparent;
-  border-right: 100px solid #dcb4d4;
-  border-bottom: 50px solid transparent;
-  position: absolute;
-  top: 110px;
-  animation: one 1.4s ease-in-out 0.6s infinite; }
-
-@keyframes one {
-  0%, 100% {
-    border-right: 100px solid #c9aac0; }
-  20%, 30% {
-    background: F89F16;
-    border-right: 100px solid #dcb4d4; } }
-.two {
-  width: 0;
-  height: 0;
-  border-top: 50px solid transparent;
-  border-left: 100px solid #ffa3ed;
-  border-bottom: 50px solid transparent;
-  position: absolute;
-  top: 110px;
-  left: 100px;
-  animation: two 1.4s ease-in-out 0.1s infinite; }
-
-@keyframes two {
-  0%, 100% {
-    border-left: 100px solid #FFC3CA; }
-  20%, 30% {
-    border-left: 100px solid #ffa3ed; } }
-.three {
-  width: 0;
-  height: 0;
-  border-top: 50px solid transparent;
-  border-right: 100px solid #f9bd4d;
-  border-bottom: 50px solid transparent;
-  position: absolute;
-  top: 50px;
-  left: 100px;
-  animation: three 1.4s ease-in-out 0.2s infinite; }
-
-@keyframes three {
-  0%, 100% {
-    border-right: 100px solid #FFDDB5; }
-  20%, 30% {
-    background: F89F16;
-    border-right: 100px solid #f9bd4d; } }
-.four {
-  width: 0;
-  height: 0;
-  border-top: 50px solid transparent;
-  border-left: 100px solid #E7D017;
-  border-bottom: 50px solid transparent;
-  position: absolute;
-  top: 100px;
-  left: 100px;
-  animation: four 1.4s ease-in-out 0.3s infinite; }
-
-@keyframes four {
-  0%, 100% {
-    border-left: 100px solid #FFF9C7; }
-  20%, 30% {
-    border-left: 100px solid #E7D017; } }
-.five {
-  width: 0;
-  height: 0;
-  border-top: 50px solid transparent;
-  border-right: 100px solid #be0052;
-  border-bottom: 50px solid transparent;
-  position: absolute;
-  top: 100px;
-  animation: green 1.4s ease-in-out 0.4s infinite; }
-
-@keyframes five {
-  0%, 100% {
-    border-left: 100px solid #DAE1FF; }
-  20%, 30% {
-    border-left: 100px solid #be0052; } }
-.six {
-  width: 0;
-  height: 0;
-  border-top: 50px solid transparent;
-  border-left: 100px solid #c27194;
-  border-bottom: 50px solid transparent;
-  position: absolute;
-  top: 50px;
-  animation: six 1.4s ease-in-out 0.5s infinite; }
-
-@keyframes six {
-  0%, 100% {
-    border-left: 100px solid #72004a; }
-  20%, 30% {
-    border-left: 100px solid #c27194; } }
-
-/*# sourceMappingURL=main.css.map */
+Backtrace:
+scss/pages/_art-gallery.scss:57
+scss/main.scss:9
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:1207:in `expected'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:1137:in `expected'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:42:in `parse'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.24/lib/sass/engine.rb:406:in `_to_tree'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.24/lib/sass/engine.rb:312:in `to_tree'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:326:in `block in visit_import'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.24/lib/sass/stack.rb:88:in `block in with_import'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.24/lib/sass/stack.rb:115:in `with_frame'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.24/lib/sass/stack.rb:88:in `with_import'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:325:in `visit_import'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.24/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.24/lib/sass/stack.rb:79:in `block in with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.24/lib/sass/stack.rb:115:in `with_frame'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.24/lib/sass/stack.rb:79:in `with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:160:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.24/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.24/lib/sass/tree/visitors/base.rb:52:in `map'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.24/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:169:in `block in visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:168:in `visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.24/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:188:in `visit_root'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.24/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:159:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.24/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.24/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.24/lib/sass/engine.rb:381:in `_render_with_sourcemap'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.24/lib/sass/engine.rb:298:in `render_with_sourcemap'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:209:in `each'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:473:in `on_file_changed'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:331:in `block in watch'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.24/vendor/listen/lib/listen/listener.rb:252:in `call'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.24/vendor/listen/lib/listen/listener.rb:252:in `on_change'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.24/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.24/vendor/listen/lib/listen/adapters/polling.rb:48:in `call'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.24/vendor/listen/lib/listen/adapters/polling.rb:48:in `poll_changed_directories'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.24/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"    }\": expected selector or at-rule, was \"}\"\A         on line 57 of scss/pages/_art-gallery.scss\A         from line 9 of scss/main.scss\A \A 52: \A 53:   .img3  {\A 54:     background-image: url('../img/XIXC.jpg');\A 55:     @extend .small-images;\A 56:     }\A 57:   }\A 58: \A 59:   .img4  {\A 60:     background-image: url('../img/XOO.jpg');\A 61:     @extend .small-images;\A 62:     }"; }
