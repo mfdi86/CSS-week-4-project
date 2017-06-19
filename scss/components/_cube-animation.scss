@@ -21,9 +21,9 @@
   height: 170px;
 }
 
-.top-trigger:hover  {
+.top-trigger:hover > .top {
   animation-name: top;
-  animation-duration: 1.9s;
+  animation-duration: 2s;
   animation-fill-mode: forwards;
 }
 
@@ -48,7 +48,7 @@
   a  {
     display: none;
     position: absolute;
-    left: 90px;
+    left: 95px;
     top: 145px;
     z-index: 1;
   }
@@ -81,17 +81,56 @@
   animation-fill-mode: forwards;
 }
 
+//STYLES FOR LEFT SIDE OF CUBE ----------------
+
 .left   {
+  position: relative;
+  right: -110px;
+  top: -100px;
+
+  a  {
+    display: none;
+    position: absolute;
+    left: 40px;
+    top: 105px;
+    z-index: 1;
+  }
 }
 
+//ANIMATIONS FOR LEFT SIDE OF CUBE ----------------
 
+.left-trigger  {
+  position: relative;
+  top: -230px;
+  left: -110px;
+  width: 200px;
+  height: 160px;
+  // border: 1px solid white;
+}
 
+.left-trigger:hover > .left {
+  animation-name: left;
+  animation-duration: 1.9s;
+  animation-fill-mode: forwards;
+}
+
+.left-trigger:hover a {
+  display: block;
+  font-family: 'Raleway Dots', cursive;
+  color: white;
+  text-decoration: none;
+  animation-name: left-text;
+  animation-duration: 2.2s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
 
 //STYLES FOR CUBE ---------------------------------
 
 .flex-cube  {
   display: flex;
   justify-content: center;
+  // animation: cube-scale 7s ease-in-out;
 }
 
 .container  {
@@ -101,7 +140,9 @@
   display: inline-block;
   top: 180px;
 }
+
 // ------------------------------------------------
+
 .one {
 	width: 0;
 	height: 0;
@@ -113,15 +154,7 @@
   animation: one 1.4s ease-in-out 0.6s infinite;
 }
 
-@keyframes one {
-  0%, 100% {
-    border-right: 100px solid #c9aac0;
-  }
-  20%, 30% {
-    background: F89F16;
-    border-right: 100px solid #dcb4d4;
-  }
-}
+
 // -------------------------------------------------
 
 .two {
@@ -136,14 +169,7 @@
   animation: two 1.4s ease-in-out 0.1s infinite;
 }
 
-@keyframes two  {
-  0%, 100% {
-    border-left: 100px solid #FFC3CA;
-  }
-  20%, 30% {
-    border-left: 100px solid #ffa3ed;
-  }
-}
+
 // -------------------------------------------------
 
 .three {
@@ -158,15 +184,7 @@
   animation: three 1.4s ease-in-out 0.2s infinite;
 }
 
-@keyframes three {
-  0%, 100% {
-    border-right: 100px solid #FFDDB5;
-  }
-  20%, 30% {
-    background: F89F16;
-    border-right: 100px solid #f9bd4d;
-  }
-}
+
 //--------------------------------------------------
 
 .four {
@@ -181,14 +199,7 @@
   animation: four 1.4s ease-in-out 0.3s infinite;
 }
 
-@keyframes four  {
-  0%, 100% {
-    border-left: 100px solid #FFF9C7;
-  }
-  20%, 30% {
-    border-left: 100px solid #E7D017;
-  }
-}
+
 //----------------------------------------------------
 
 .five {
@@ -199,17 +210,10 @@
   border-bottom: 50px solid transparent;
   position: absolute;
   top: 100px;
-  animation: green 1.4s ease-in-out 0.4s infinite;
+  animation: five 1.4s ease-in-out 0.4s infinite;
 }
 
-@keyframes five {
-  0%, 100% {
-    border-left: 100px solid #DAE1FF;
-  }
-  20%, 30% {
-    border-left: 100px solid #be0052;
-  }
-}
+
 
 //---------------------------------------------------------
 
@@ -222,13 +226,4 @@
   position: absolute;
   top: 50px;
   animation: six 1.4s ease-in-out 0.5s infinite;
-}
-
-@keyframes six {
-  0%, 100% {
-    border-left: 100px solid #72004a;
-  }
-  20%, 30% {
-    border-left: 100px solid #c27194;
-  }
 }

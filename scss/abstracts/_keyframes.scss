@@ -34,7 +34,7 @@
   }
 }
 
-//VISUAL ART TEXT ANIMATION --------------------------
+//"VISUAL ART" TEXT ANIMATION --------------------------
 
 @keyframes top-text {
   0%  {
@@ -51,20 +51,103 @@
 
 @keyframes right {
   0%  {
-    transform: rotate3d(-2,1, 0,-360deg);
+
   }
   100% {
     transform:  translateY(40px)translateX(60px);
   }
 }
 
+//"MUSIC" TEXT ANIMATION --------------------------
+
 @keyframes right-text {
   0%  {
-    transform: rotate3d(-2,1, 0,-360deg);
     opacity: 0;
   }
   100% {
     transform:  translateY(-10px)translateX(130px);
     opacity: 1;
+  }
+}
+
+//LEFT SIDE OF CUBE OPENING ANIMATION----------
+
+@keyframes left {
+  0%  {
+    transform: rotate3d(-2,1, 0,-360deg);
+  }
+  100% {
+    transform:  translateY(40px)translateX(-60px);
+  }
+}
+
+//"WEB" TEXT ANIMATION --------------------------
+
+@keyframes left-text {
+  0%  {
+    transform: rotate3d(-2,1, 0,-360deg);
+    opacity: 0;
+  }
+  100% {
+    transform:  translateY(30px)translateX(-100px);
+    opacity: 1;
+  }
+}
+
+//CUBE COLOR ANIMATION----------------------
+
+@keyframes one {
+  0%, 100% {
+    border-right: 100px solid #c9aac0;
+  }
+  20%, 30% {
+
+    border-right: 100px solid #dcb4d4;
+  }
+}
+
+@keyframes two  {
+  0%, 100% {
+    border-left: 100px solid #FFC3CA;
+  }
+  20%, 30% {
+    border-left: 100px solid #ffa3ed;
+  }
+}
+
+@keyframes three {
+  0%, 100% {
+    border-right: 100px solid #FFDDB5;
+  }
+  20%, 30% {
+    background: F89F16;
+    border-right: 100px solid #f9bd4d;
+  }
+}
+
+@keyframes four  {
+  0%, 100% {
+    border-left: 100px solid #FFF9C7;
+  }
+  20%, 30% {
+    border-left: 100px solid #E7D017;
+  }
+}
+
+@keyframes five {
+  0%, 100% {
+    border-right: 100px solid #f56fa9;
+  }
+  20%, 30% {
+    border-right: 100px solid #be0052;
+  }
+}
+
+@keyframes six {
+  0%, 100% {
+    border-left: 100px solid #72004a;
+  }
+  20%, 30% {
+    border-left: 100px solid #c27194;
   }
 }
